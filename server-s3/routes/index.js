@@ -34,7 +34,7 @@ router.post('/save', (req, res) => {
   console.log(desc);
 
   //Save it to the DB
-  MongoClient.connect('mongodb://localhost:27017/animals', function (err, client) {
+  MongoClient.connect('mongodb://localhost:27017/profiles', function (err, client) {
     if (err){
       res.json({ 'Status': 'Error' });
     res.end();
