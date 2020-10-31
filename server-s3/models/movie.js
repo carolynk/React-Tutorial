@@ -1,8 +1,7 @@
 let mongoose = require('mongoose')
 
 let movieSchema = new mongoose.Schema({
-  name:String,
-  isFav : Boolean
+  name: String,
 })
 
 module.exports = mongoose.model('Movie', movieSchema)

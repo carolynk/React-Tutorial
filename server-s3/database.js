@@ -4,7 +4,7 @@ https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593
 let mongoose = require('mongoose');
 
 const server = '127.0.0.1:27017'; // REPLACE WITH YOUR DB SERVER
-const database = 'myApp';      // REPLACE WITH YOUR DB NAME
+const database = 'profiles';      // REPLACE WITH YOUR DB NAME
 
 class Database {
   constructor() {
