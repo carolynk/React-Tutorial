@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
-var movieRepo = require("../repository/emailRepository")
+var movieRepo = require("../repository/movieRepository")
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -54,9 +54,10 @@ router.post('/saveMovie', (req,res)=>{
   //Fetch required variables from the request.
   let movieName = req.body.movieName;
   let isFav = req.body.isFav;
-
+  console.log(movieName);
+  console.log(isFav);
   movieRepo.create(movieName, isFav,()=>{
-    res.json({"ststus" : "saved"});
+    res.json({"status" : "saved"});
     res.end();
   })
 })
